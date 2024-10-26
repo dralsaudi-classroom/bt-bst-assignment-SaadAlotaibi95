@@ -154,8 +154,6 @@ public class BST<T> {
 		return p;
 	}
 	public int countNodesIn(int k) {
-		// Write the member method countNodesIn member of the class BST that returns the number of nodes in the subtree rooted at
-		// the node with key k. Assume that k exists. You are not allowed to call any of the BST methods.
 		if(root == null)
 			return 0;
 		int count = 0;
