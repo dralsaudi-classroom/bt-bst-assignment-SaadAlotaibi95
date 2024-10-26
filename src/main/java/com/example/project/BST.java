@@ -162,13 +162,13 @@ public class BST<T> {
 		BSTNode<T> STRoot = root;
 		while(STRoot.key != k) {
 			if(STRoot.key < k) {
-//				if(STRoot.right == null)
-//					return 0;
+				if(STRoot.right == null)
+					return 0;
 				STRoot = STRoot.right;
 				}
 			else {
-//				if(STRoot.left == null)
-//					return 0;
+				if(STRoot.left == null)
+					return 0;
 				STRoot = STRoot.left;
 			}
 		}
