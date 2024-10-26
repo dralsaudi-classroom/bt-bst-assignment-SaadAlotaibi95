@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public class BST<T> {
     BSTNode<T> root, current;
@@ -154,8 +154,34 @@ public class BST<T> {
 		return p;
 	}
 	public int countNodesIn(int k) {
-		throw new UnsupportedOperationException("Not supported yet.");
 		// Write the member method countNodesIn member of the class BST that returns the number of nodes in the subtree rooted at
 		// the node with key k. Assume that k exists. You are not allowed to call any of the BST methods.
+		if(root == null)
+			return 0;
+		int count = 0;
+		BSTNode<T> STRoot = root;
+		while(STRoot.key != k) {
+			if(STRoot.key < k) {
+//				if(STRoot.right == null)
+//					return 0;
+				STRoot = STRoot.right;
+				}
+			else {
+//				if(STRoot.left == null)
+//					return 0;
+				STRoot = STRoot.left;
+			}
+		}
+		LinkedStack<BSTNode<T>> temp = new LinkedStack<>();
+		temp.push(STRoot);
+		while(!temp.empty()) {
+			BSTNode<T> tempNode = temp.pop();
+			count++;
+			if(tempNode.left != null) 
+				temp.push(tempNode.left);
+			if(tempNode.right != null) 
+				temp.push(tempNode.right);
+		}
+		return count;
 	}
 }

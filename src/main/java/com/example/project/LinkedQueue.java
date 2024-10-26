@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public class LinkedQueue<T> implements Queue<T>{
     private Node<T> head, tail;

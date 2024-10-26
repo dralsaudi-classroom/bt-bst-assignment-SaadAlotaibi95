@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public class BT<T> {
     BTNode<T> root, current;
@@ -99,7 +99,21 @@ public class BT<T> {
 		return current.left == null && current.right == null;
 	}
 	public int countLeaves() {
-		throw new UnsupportedOperationException("Not supported yet.");
-		// Write the method countLeafs that should return the number of leaf nodes in the tree. A leaf node is a node that has no children.
+		if (root == null)
+			return 0;
+		int count = 0;
+		LinkedStack<BTNode<T>> temp = new LinkedStack<>();
+		temp.push(root);
+		while(!temp.empty()) {
+			BTNode<T> tempNode = temp.pop();
+			if(tempNode.right == null && tempNode.left == null)
+				count++;
+			else
+				if(tempNode.left != null)
+					temp.push(tempNode.left);
+				if(tempNode.right != null)
+					temp.push(tempNode.right);
+		}
+		return count;
 	}
 }

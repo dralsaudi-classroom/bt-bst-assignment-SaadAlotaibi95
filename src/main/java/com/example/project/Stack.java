@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public interface Stack<T> {
     public T pop();

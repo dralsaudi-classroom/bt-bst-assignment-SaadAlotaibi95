@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public interface Queue<T> {
     public T serve();

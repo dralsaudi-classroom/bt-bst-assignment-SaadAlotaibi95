@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public class DLL<T> {
 	private DLLNode<T> head;
