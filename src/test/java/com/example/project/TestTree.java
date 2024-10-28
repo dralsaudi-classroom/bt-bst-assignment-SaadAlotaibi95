@@ -1,4 +1,5 @@
-package com.example.project;
+package test.java.com.example.project;
+import main.java.com.example.project.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

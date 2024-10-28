@@ -1,4 +1,4 @@
-package com.example.project;
+package main.java.com.example.project;
 
 public class ArrayQueue<T> implements Queue<T> {
     private int maxsize;
